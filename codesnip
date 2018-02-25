@@ -1,0 +1,22 @@
+
+//Functions to check if user signed petition
+//call this when petion/signers/:city
+//in the get petion/signers/
+//in the petition/signed
+
+function requireSig (req, res, next) {
+    if (!req.session.user.signatureId){
+        //if there is no signaute id - go to petition page 
+        return res.redirect('/petition');
+    }
+    next();
+}
+//logedin
+function requireLoggedOut(req, res, next){
+    if(req.session.user){
+        return res.redirect('/petition);
+    }
+    next();
+}
+//Can call these functions as a middle  ware in the app.get/ app.post
+//Don't call in the register.

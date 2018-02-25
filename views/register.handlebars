@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="join">Join Us!</div>
+        <div class="lock"></div>
+        <div class="clr"></div>
+        <div class="login-options">
+            <p>
+                Ever wonder Why does Europe lacks grocery stores open 24 hours?
+                the answer is: some countires decided to protect employees rights by
+                imposing legal restrictions on shop opening hours.
+                Let's make a change without hurting employees rights!.
+            </p>
+        </div>
+
+        <div class="clr"><hr /></div>
+        <div class="mail-text">Sign up Today to have grocery stores open around the clock!</div>
+        <div class="forms">
+            <form action="/register" method="post" name="register">
+                <input name="first" type="text" value="" placeholder="First name" size="70" id="firstname" required/>
+                <input name="last" type="text" value="" placeholder="Last name" size="70" id="lastname"required/>
+                <input name="email" type="email" value="" placeholder="Email" size="70" id="mail" required/>
+                <input name="password" type="password" value="" placeholder="Password" size="70" id="password" required/>
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                <input type="submit" value="SIGN UP" id="submit">
+            </form>
+        </div>
+
+    </div>
+    <div class="footer">if you are already a memeber please <a href="/login" target="_blank">login.</a></div>
+
+
+</body>
+
+</html>

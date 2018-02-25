@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="join">We want to know more about you!</div>
+        <div class="lock"></div>
+        <div class="clr"></div>
+        <div class="login-options">
+            <p>
+                Now please tell us just a little bit more about yourself.
+            </p>
+        </div>
+
+        <div class="clr"><hr /></div>
+        <div class="mail-text">Please fill in the following questions:</div>
+        <div class="forms">
+            <form action="/profile" method="post" name="profile">
+                <input name="age" type="text" value="" placeholder="Age" size="70" id="age" />
+                <input name="city" type="text" value="" placeholder="City" size="70" id="city"/>
+                <input name="url" type="text" value="" placeholder="URL" size="70" id="url" />
+                <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                <input type="submit" value="CONTINUE" id="submit"/>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

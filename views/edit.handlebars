@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit your profile</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="join">Edit your profile</div>
+        <div class="lock"></div>
+        <div class="clr"></div>
+        <div class="login-options">
+
+        </div>
+
+        <div class="clr"><hr /></div>
+
+        <div class="forms">
+            <form action="/edit" method="post" name="edit">
+            {{#info}}
+                <input name="first" type="text" value="{{this.first}}" placeholder="First Name" size="70" id="firstname" required/>
+                <input name="last" type="text" value="{{this.last}}" placeholder="Last Name" size="70" id="lastname"required/>
+                <input name="email" type="email" value="{{this.email}}" placeholder="Email Address" size="70" id="mail" required/>
+                <input name="password" type="password" value="{{this.password}}" placeholder="Password" size="70" id="password"/>
+                <input name="age" type="text" value="" placeholder="Age" size="70" id="age"/>
+                <input name="city" type="text" value="" placeholder="City" size="70" id="city"/>
+                <input name="url" type="text" value="" placeholder="URL" size="70" id="url" />
+                {{/info}}
+                <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                <input type="submit" value="UPDATE" id="submit"/>
+            </form>
+        </div>
+
+    </div>
+
+<div class="footer">For login out, press <a href="/logout" target="_blank"> Here.</a></div>
+</body>
+
+</html>

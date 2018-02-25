@@ -1,0 +1,47 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Thank you</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="join">Thank you!</div>
+      <div class="lock"></div>
+      <div class="clr"></div>
+      <div class="login-options">
+        <p>
+          We would like to thank you for signing our petition, hearing your voice will make a difference!
+        </p>
+        <img src="{{signatureUrl}}" alt="Your signature">
+        <br>
+        <div>
+           <div class="clr"><hr /></div>
+          <a href="/signers"><br>
+            <p>See all {{count}} signatures</p>
+          </a>
+          <a href="/edit"><br>
+            <p>Edit your profile</p>
+          </a>
+          <br>
+          <form method="post" action="/delete">
+          <input type="hidden" name="_csrf" value="{{csrfToken}}">
+          <button id="btn" type="sumbit">Delete your signature</button>
+          </form>
+          
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="footer">For login out press
+      <a href="/logout" target="_blank"> Here.</a>
+    </div>
+
+  </body>
+
+  </html>

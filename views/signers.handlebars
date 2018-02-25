@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signers</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="join">List of the people who signed our petition!</div>
+        <div class="lock"></div>
+        <div class="clr"></div>
+        <div class="login-options">
+            </div>
+             <div class="clr"><hr /></div>
+             
+            {{#each list}}
+            <p>
+                {{#if this.url}}
+                <a target = "_blank" href="{{this.url}}">{{this.first}} {{this.last}}</a>
+                {{else}}
+                {{this.first}} {{this.last}}
+                {{/if}}
+
+                {{#if this.age}}({{this.age}}
+                {{#if this.city}} ,<a href="{{this.city}}">{{this.city}}</a>{{/if}})
+                {{else}}
+                {{#if this.city}} (<a href="{{this.city}}">{{this.city}}</a>) {{/if}}
+                {{/if}}
+
+            </p>
+            {{/each}}
+            
+        </div>
+        
+    
+    <div class="footer">For login out, press 
+        <a href="/logout" target="_blank"> Here.</a>
+        or  to go back press<a href="/back" target="_blank"> Here.</a>
+        </div>
+    
+    </body>
+ 
+    </html>
