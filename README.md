@@ -22,9 +22,3 @@ Main Features:
 
 ![screenshot](https://github.com/spicedacademy/saffron-petition/blob/elivan/public/img/screenshot.png)
 
-
-
-
-# petition
-# petition
-# petition
