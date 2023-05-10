@@ -1,7 +1,6 @@
 Petition
 Summary:<br> 
 A petition for opening more 24-7 convenience stores in Europe.<br>
-Hosted on Heroku https://saffron-petition.herokuapp.com/register (using the free Heroku plan, so it might take a few seconds to load).
 
 Tech Stack:
 
